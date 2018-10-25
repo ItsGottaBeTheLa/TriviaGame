@@ -4,12 +4,12 @@ body {
     text-align: center;
     margin-top: 55px;
     margin-bottom: 25px;
-    background-color: darkgrey;
+    background-color: darkslategray;
 
 }
 #wrapper {
     border: solid;
-    background-color: darkslategrey;
+    background-color: darkgrey;
     margin-left: 25%;
     margin-right: 25%;
     padding-left: 15px;
