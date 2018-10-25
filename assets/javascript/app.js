@@ -77,7 +77,14 @@ var game = {
         game.loadQuestion();
     },
     timeUp: function() {
-
+        clearInterval(timer);
+        $('#subwrapper').html('<h2>You Ran out of time!</h2>');
+        $('#subwrapper').append('<h3>The Correct answer is: ' + questions[game.currentQuestion].correctAnswer + '</h3>');
+        if (game.currentQuestion == questions.length - 1) {
+            setTimeout(game.results, 3 * 1000);
+        } else {
+            setTimeout(game.nextQuestion, 3 * 1000);
+        }
     },
     results: function() {
 
@@ -107,6 +114,7 @@ var game = {
         clearInterval(timer);
         game.incorrect ++;
         $('#subwrapper').html('<h2>You Got it Wrong!</h2>');
+        $('#subwrapper').append('<h3>The Correct answer is: ' + questions[game.currentQuestion].correctAnswer + '</h3>');
         if (game.currentQuestion == questions.length - 1) {
             setTimeout(game.results, 3 * 1000);
         } else {
