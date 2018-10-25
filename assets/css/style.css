@@ -7,6 +7,16 @@ body {
     background-color: darkgrey;
 
 }
+#wrapper {
+    border: solid;
+    background-color: darkslategrey;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+    align-items: center;
+}
 button {
     font-family: 'Indie Flower', cursive;
     font-size: 25px;
