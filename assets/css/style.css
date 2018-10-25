@@ -8,12 +8,18 @@ body {
 
 }
 button {
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
     cursor: pointer;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     z-index: 50;
+}
+button:hover {
+    background-color: greenyellow;
+    color: darkblue;
 }
 h2 {
     color: red;
@@ -58,9 +64,13 @@ span {
     font-family: 'Indie Flower', cursive;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 15px;
 }
 #reset:hover {
     background-color: crimson;
     color: blue;
+    padding-left: 10px;
+    padding-right: 10px;
 }
