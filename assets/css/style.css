@@ -44,12 +44,23 @@ span {
 #subwrapper {
     display: inline-block;
     align-items: center;
+    columns: 1;
 }
-/* #button-0,
+#button-0,
 #button-1,
 #button-2,
 #button-3{
     display: inline-block;
     position: fixed;
     align-items: center;
-} */
+}
+#reset {
+    font-family: 'Indie Flower', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+#reset:hover {
+    background-color: crimson;
+    color: blue;
+}
