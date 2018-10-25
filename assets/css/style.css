@@ -1,0 +1,55 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    background-color: darkgrey;
+
+}
+button {
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 50;
+}
+h2 {
+    color: red;
+}
+h3 {
+    color: blue;
+}
+span {
+    color: black;
+    background-color: chartreuse;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.answer-button {
+    display: flex;
+    border-style: hidden;
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: blue;
+    background-color: white;
+    font-size: 25px;
+}
+.answer-button:hover {
+    background-color: red;
+}
+#subwrapper {
+    display: inline-block;
+    align-items: center;
+}
+/* #button-0,
+#button-1,
+#button-2,
+#button-3{
+    display: inline-block;
+    position: fixed;
+    align-items: center;
+} */
