@@ -1,10 +1,14 @@
 $('#start').on('click', function(){
     $('#start').remove();
     game.loadQuestion();
-});
+})
 
 $(document).on('click', '.answer-button', function(e) {
     game.clicked(e);
+})
+
+$(document).on('click', '#reset', function() {
+    game.reset();
 })
 
 var questions = [{
@@ -66,7 +70,8 @@ var game = {
     },
     loadQuestion: function() {
         timer = setInterval(game.countdown, 1000);
-        $('#subwrapper').html('<h2>' + questions[game.currentQuestion].question + '</h2>')
+        $('#subwrapper').html("<h2 id = 'counter'>30</h2>");
+        $('#subwrapper').append('<h2>' + questions[game.currentQuestion].question + '</h2>')
         for (var i = 0; i < questions[game.currentQuestion].answers.length; i++) {
             $('#subwrapper').append('<button class = "answer-button" id = "button-'+i+' "data-name = "'+ questions[game.currentQuestion].answers[i] + '"> '+ questions[game.currentQuestion].answers[i] +'</button>');
         }
@@ -94,6 +99,7 @@ var game = {
         $('#subwrapper').append("<h3>Correct: " + game.correct + "</h3>");
         $('#subwrapper').append("<h3>Incorrect: " + game.incorrect + "</h3>");
         $('#subwrapper').append("<h3>Question's you did not answer: " + game.unanswered + "</h3>");
+        $('#subwrapper').append("<button id = 'reset' >Let's Play Again!</button>");
     },
     clicked: function(e) {
         clearInterval(timer);
@@ -128,6 +134,11 @@ var game = {
         }
     },
     reset: function() {
-
+        game.currentQuestion = 0;
+        game.counter = 0;
+        game.correct = 0;
+        game.incorrect = 0;
+        game.unanswered = 0;
+        game.loadQuestion();
     }
 }
