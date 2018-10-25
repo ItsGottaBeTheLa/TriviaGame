@@ -1,5 +1,5 @@
-$("#start").on("click", function(){
-    $("#start").remove();
+$('#start').on('click', function(){
+    $('#start').remove();
     game.loadQuestion();
 });
 
@@ -92,12 +92,26 @@ var game = {
 
     },
     answeredCorrectly: function() {
-        console.log("You got it right!");
-
+        // console.log("You got it right!");
+        clearInterval(timer);
+        game.correct ++;
+        $('#subwrapper').html('<h2>You Got it Right!</h2>');
+        if (game.currentQuestion == questions.length - 1) {
+            setTimeout(game.results, 3 * 1000);
+        } else {
+            setTimeout(game.nextQuestion, 3 * 1000);
+        }
     },
     answeredIncorrectly: function() {
-        console.log("You got it wrong!");
-
+        // console.log("You got it wrong!");
+        clearInterval(timer);
+        game.incorrect ++;
+        $('#subwrapper').html('<h2>You Got it Wrong!</h2>');
+        if (game.currentQuestion == questions.length - 1) {
+            setTimeout(game.results, 3 * 1000);
+        } else {
+            setTimeout(game.nextQuestion, 3 * 1000);
+        }
     },
     reset: function() {
 
