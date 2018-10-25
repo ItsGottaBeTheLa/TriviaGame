@@ -55,6 +55,7 @@ var game = {
     counter: 30,
     correct: 0,
     incorrect: 0,
+    unanswered: 0,
     countdown: function() {
         game.counter --;
         $('#counter').html(game.counter);
@@ -78,6 +79,7 @@ var game = {
     },
     timeUp: function() {
         clearInterval(timer);
+        game.unanswered ++;
         $('#subwrapper').html('<h2>You Ran out of time!</h2>');
         $('#subwrapper').append('<h3>The Correct answer is: ' + questions[game.currentQuestion].correctAnswer + '</h3>');
         if (game.currentQuestion == questions.length - 1) {
@@ -87,7 +89,11 @@ var game = {
         }
     },
     results: function() {
-
+        clearInterval(timer);
+        $('#subwrapper').html("<h2>Game Over!</h2>");
+        $('#subwrapper').append("<h3>Correct: " + game.correct + "</h3>");
+        $('#subwrapper').append("<h3>Incorrect: " + game.incorrect + "</h3>");
+        $('#subwrapper').append("<h3>Question's you did not answer: " + game.unanswered + "</h3>");
     },
     clicked: function(e) {
         clearInterval(timer);
@@ -99,7 +105,7 @@ var game = {
 
     },
     answeredCorrectly: function() {
-        // console.log("You got it right!");
+        console.log("You got it right!");
         clearInterval(timer);
         game.correct ++;
         $('#subwrapper').html('<h2>You Got it Right!</h2>');
@@ -110,7 +116,7 @@ var game = {
         }
     },
     answeredIncorrectly: function() {
-        // console.log("You got it wrong!");
+        console.log("You got it wrong!");
         clearInterval(timer);
         game.incorrect ++;
         $('#subwrapper').html('<h2>You Got it Wrong!</h2>');
