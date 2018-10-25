@@ -46,6 +46,7 @@ span {
     border-style: hidden;
     position: relative;
     font-family: 'Indie Flower', cursive;
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     color: blue;
