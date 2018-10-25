@@ -70,7 +70,7 @@ var game = {
     },
     loadQuestion: function() {
         timer = setInterval(game.countdown, 1000);
-        $('#subwrapper').html("<h2 id = 'counter'>30</h2>");
+        $('#subwrapper').html("<h2>Time Remaining <span id = 'counter'>30</span> Seconds</h2>");
         $('#subwrapper').append('<h2>' + questions[game.currentQuestion].question + '</h2>')
         for (var i = 0; i < questions[game.currentQuestion].answers.length; i++) {
             $('#subwrapper').append('<button class = "answer-button" id = "button-'+i+' "data-name = "'+ questions[game.currentQuestion].answers[i] + '"> '+ questions[game.currentQuestion].answers[i] +'</button>');
