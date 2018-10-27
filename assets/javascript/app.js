@@ -44,7 +44,7 @@ var questions = [{
 }, {
     question: "For which film did Robert de Niro win his first Oscar?",
     answers: ["The Godfather", "Casino", "A Bronx Tale", "The Godfather II"],
-    correctAnswer: "The GodFather II",
+    correctAnswer: "The Godfather II",
     image: "assets/images/mufasa.jpg"
 }, {
     question: "Which sport is Michael Jordan best know for?",
